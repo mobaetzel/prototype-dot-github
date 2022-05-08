@@ -1,0 +1,59 @@
+name: Bug report 🪲
+description: Create a bug report.
+labels: ['bug 🪲']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please provide a searchable summary of the issue in the title above ☝️.
+
+        Thanks for contributing by creating an issue! ❤️
+  - type: checkboxes
+    attributes:
+      label: Duplicates 👀
+      description: Please search the history of issues to see if an issue already exists for the same problem.
+      options:
+        - label: I have searched the existing issues
+          required: true
+  - type: checkboxes
+    attributes:
+      label: Latest version 📆
+      description: Since we continuously release bug fixes, performance enhancements, security patches and other improvements make sure you have tested the latest version.
+      options:
+        - label: I have tested the latest version
+          required: true
+  - type: textarea
+    attributes:
+      label: Current behaviour 😦
+      description: Describe in detail what happens instead of the expected behaviour. Include screenshots, if relevant (which it most likely is).
+  - type: textarea
+    attributes:
+      label: Expected behaviour 😌
+      description: Describe in detail what should happen.
+  - type: textarea
+    attributes:
+      label: Steps to reproduce 🎯
+      description: |
+        Provide an unambiguous set of steps to reproduce the issue. Be as detailed as possible.
+        Issues that we can't reproduce will be closed.
+      value: |
+        Steps:
+        1.
+        2.
+        3.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Context 🔦
+      description: What are you trying to accomplish? How has this issue affected you? Providing context helps us come up with a solution that is more useful in the real world.
+  - type: textarea
+    attributes:
+      label: Environment 🌎
+      description: Please specify your environment.
+      value: |
+        Browser incl. Version:
+        Operating System incl. Version:
+        Used third-party applications (e.g. screen-reader etc.):
+    validations:
+      required: true
