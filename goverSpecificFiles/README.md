@@ -5,7 +5,7 @@
 <h1 align="center">Gover</h1>
 <h3 align="center">Tagline</h3>
 
-<p align="center">Our Mission is... / What we are...</p>
+<p>Our Mission is... / What we are...</p>
 <div>
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/mui/material-ui/blob/HEAD/LICENSE)
 [![CircleCI](https://circleci.com/gh/mui/material-ui/tree/master.svg?style=shield)](https://app.circleci.com/pipelines/github/mui/material-ui?branch=master)

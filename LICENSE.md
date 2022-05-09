@@ -1,27 +1,31 @@
-Business Source License 1.1
+# Business Source License 1.1
 
-Parameters
+## Parameters
 
-Licensor:             Aivot UG
-Licensed Work:        Gover
-The Licensed Work is (c) 2022 Aivot UG
+Licensor: Aivot UG
+
+Licensed Work: Gover  
+The Licensed Work is &copy; 2022 Aivot UG
+
 Additional Use Grant: You may make use of the Licensed Work, provided that you do
 not use the Licensed Work for an eGovernment Service.
 
-                      An "eGovernment Service" is a commercial offering
-                      that allows third parties (other than your employees and
-                      contractors directly associated with your Organization) to access the functionality of the Licensed
-                      Work so that such third parties directly benefit from the
-                      eGovernment features of the Licensed Work.
-                      Examples:
-                      An "eGovernment Service" exists when you host the Licensed Work within your administration
-                      and make it available to other administrations so that you and/or other administrations
-                      can access the features of the Licensed Work.
+```
+An "eGovernment Service" is a commercial offering
+that allows third parties (other than your employees and
+contractors directly associated with your Organization) to access the functionality of the
+Licensed Work so that such third parties directly benefit from the
+eGovernment features of the Licensed Work.
 
-                      An "eGovernment Service" DOES NOT EXIST if you host the Licensed Work within your administration
-                      and make it available only to your employees and contractors directly associated with your
-                      organization.
+Examples:
+An "eGovernment Service" exists when you host the Licensed Work within your administration
+and make it available to other administrations so that you and/or other administrations
+can access the features of the Licensed Work.
 
+An "eGovernment Service" DOES NOT EXIST if you host the Licensed Work within your administration
+and make it available only to your employees and contractors directly associated with your
+organization.
+```
 
 Change Date:          17.03.2025
 
@@ -30,7 +34,7 @@ Change License:       Apache License, Version 2.0
 For information about alternative licensing arrangements for the Software,
 please visit: https://aivot.de/gover/pricing/
 
-Notice
+## Notice
 
 The Business Source License (this document, or the "License") is not an Open
 Source license. However, the Licensed Work will eventually be made available
@@ -39,11 +43,11 @@ under an Open Source License, as stated in this License.
 License text copyright (c) 2017 MariaDB Corporation Ab, All Rights Reserved.
 "Business Source License" is a trademark of MariaDB Corporation Ab.
 
------------------------------------------------------------------------------
+---
 
-Business Source License 1.1
+# Business Source License 1.1
 
-Terms
+## Terms
 
 The Licensor hereby grants you the right to copy, modify, create derivative
 works, redistribute, and make non-production use of the Licensed Work. The
@@ -89,7 +93,7 @@ MariaDB hereby grants you permission to use this License’s text to license
 your works, and to refer to it using the trademark "Business Source License",
 as long as you comply with the Covenants of Licensor below.
 
-Covenants of Licensor
+## Covenants of Licensor
 
 In consideration of the right to use this License’s text and the "Business
 Source License" name and trademark, Licensor covenants to MariaDB, and to all
