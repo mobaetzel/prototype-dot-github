@@ -6,13 +6,12 @@
 - Please use the following Git commit message style
   - Use the future tense ("Adds feature" not "Added feature")
   - Use a `Fixes #XXX -` or `Closes #XXX -` prefix for the title of the PR to auto-close the issue that your PR addresses
+    - `#XXX` representing the ID of the GitHub issue
   - Limit the title of the pull request to 72 characters or less
   - Reference issues and pull requests liberally after the first line
-- Please note, that all commits will be squashed before merging
+- Please note, that all commits will be squashed before merging. See the [contributing guidelines](../CONTRIBUTING.md) for more details
 
-## ↑ DELETE above _before_ submitting ↑
-
----
+## ↑ DELETE this line and above _before_ submitting ↑
 
 # Description
 
