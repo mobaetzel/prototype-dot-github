@@ -1,5 +1,5 @@
 name: Feature request 🥺
-description: Suggest a new idea.
+description: Suggest a new idea for a non existing functionality.
 labels: ['request 🥺']
 body:
   - type: markdown
