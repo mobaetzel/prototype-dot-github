@@ -1,0 +1,38 @@
+name: Improvement request ♻️
+description: Suggest a new idea for improving an existing functionality.
+labels: ['improvement ♻️']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please provide a searchable summary of the issue in the title above ☝️.
+
+        Thanks for contributing by creating an issue! ❤️
+  - type: checkboxes
+    attributes:
+      label: Duplicates 👀
+      description: Please search the history of issues to see if an issue already exists for the same problem.
+      options:
+        - label: I have searched the existing issues
+          required: true
+  - type: checkboxes
+    attributes:
+      label: Latest version 📆
+      description: Since we continuously release bug fixes, performance enhancements, security patches and other improvements make sure you have tested the latest version.
+      options:
+        - label: I have tested the latest version
+          required: true
+  - type: textarea
+    attributes:
+      label: Summary 💡
+      description: Describe in detail how it should work.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Examples 🫣
+      description: If possible, provide examples e.g. through screenshots, other implementations etc.
+  - type: textarea
+    attributes:
+      label: Motivation 🔦
+      description: What are you trying to accomplish? How has the lack of this improvement affected you? Providing context helps us come up with a solution that is more useful in the real world.
