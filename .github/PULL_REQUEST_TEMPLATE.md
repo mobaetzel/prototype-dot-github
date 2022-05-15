@@ -2,15 +2,17 @@
 
 ### ! IMPORTANT !
 
-- Please create an issue _before_ creating a pull request
+- Please create an issue *before* creating a pull request
 - Please use the following Git commit message style
   - Use the future tense ("Adds feature" not "Added feature")
-  - Use a `Fixes #XXX -` or `Closes #XXX -` prefix for the title of the PR to auto-close the issue that your PR addresses
+  - Use a `Closes #XXX -` prefix for the title of the PR to auto-close the issue that your PR addresses
     - `#XXX` representing the ID of the GitHub issue
-  - Limit the title of the pull request to 72 characters or less
+  - Limit the title of the pull request to 50 characters or less
   - Reference issues and pull requests liberally after the first line
 - Please note, that all commits will be squashed before merging. See the [contributing guidelines](../CONTRIBUTING.md) for more details
 
+NOTE: Wir können auch über CU-TASKID[closed] die tasks bei clickup automatisch schließen. muss im pull request
+title genannt werden. --> macht das sinn? könnte eventuelle stages beim testen etc. überspringen.
 ## ↑ DELETE this line and above _before_ submitting ↑
 
 # Description

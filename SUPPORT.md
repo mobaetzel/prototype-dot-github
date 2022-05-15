@@ -1,3 +1,3 @@
-What information should we provide?
-Suggestion: Link to https://aivot.de/support for further information. On this page the project can be chosen.
-Each projects lists who gets support and where.
+# Support
+Please visit our [support page](https://aivot.de/support) and choose the respective project for further information
+on support resources.

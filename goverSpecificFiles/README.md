@@ -40,13 +40,6 @@ die unbedingt ein Feature benötigt, kann eine Bounty ausschreiben und wenn wir 
 wir das Feature um und kassieren das Geld/die Bounty. Wir können mailto machen mit headline "[Bounty] Gover"
 oder wir nutzen das issue template "feature request" dazu und versehen es mit einer bounty angabe.
 
-# Support
-Hinweis das wir keinen Support bieten. Für SaaS bieten wir Support. Für On-Premise bieten wir Support-Verträge an.
-
-Bürger:innen bekommen Support von den entsprechenden Verwaltungen, wir sind nur technischer Dienstleister.
-Nichts desto trotz können Bürger:innen sich beteiligen v.a. auch mit bugs etc. siehe Contributing.
-Das ganze was oben steht sollte auf Website genannt werden. Hier im Markdown wird nur auf SUPPORT.md verlinkt.
-
 # Changelog
 If you have recently updated, please read the [changelog](https://github.com/mui/material-ui/releases) for details of what has changed.
 
