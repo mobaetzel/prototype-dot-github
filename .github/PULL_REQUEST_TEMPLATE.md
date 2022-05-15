@@ -2,31 +2,25 @@
 
 ### ! IMPORTANT !
 
-- Please create an issue *before* creating a pull request
-- Please use the following Git commit message style
-  - Use the future tense ("Adds feature" not "Added feature")
-  - Use a `Closes #XXX -` prefix for the title of the PR to auto-close the issue that your PR addresses
-    - `#XXX` representing the ID of the GitHub issue
-  - Limit the title of the pull request to 50 characters or less
-  - Reference issues and pull requests liberally after the first line
-- Please note, that all commits will be squashed before merging. See the [contributing guidelines](../CONTRIBUTING.md) for more details
+- Please create an issue **before** creating a Pull Request.
+- Stick to the [Guidelines for Submitters of Pull Requests](../CONTRIBUTING.md#Guidelines for Submitters) when creating
+a Pull Request.
+- Please note, that all commits will be squashed before merging.
+See the [Contributing Guidelines](../CONTRIBUTING.md#General Workflow) for more details.
 
-NOTE: Wir können auch über CU-TASKID[closed] die tasks bei clickup automatisch schließen. muss im pull request
-title genannt werden. --> macht das sinn? könnte eventuelle stages beim testen etc. überspringen.
-## ↑ DELETE this line and above _before_ submitting ↑
+### ↑ DELETE this line and above **before** submitting ↑
 
 # Description
 
-<!--
-Please include a summary of the changes and which issue will be addressed. Please also include relevant motivation and context.
--->
+<!-- Please stick to the [Guidelines for Submitters of Pull Requests](../CONTRIBUTING.md#Guidelines for Submitters). -->
 
 # Checklist
 
-<!-- Please check off the following -->
+<!-- Only make a Pull Request if you can check off everything from the following list. -->
 
-- [ ] I have followed the [contributing guidelines](../CONTRIBUTING.md)
-- [ ] My changes follow the [coding style](../STYLEGUIDE.md) of this project
+- [ ] I have followed the [Contributing Guidelines](../CONTRIBUTING.md)
+- [ ] My Pull Request follows the [Guidelines for Submitters of Pull Requests](../CONTRIBUTING.md#Guidelines for Submitters)
+- [ ] My commits follow the [Commit Message Guideline](../CONTRIBUTING.md#Commit Message)
+- [ ] My changes follow the [Styleguide](../STYLEGUIDE.md) of this project
 - [ ] My changes build without any errors or warnings
 - [ ] My changes have been formatted and linted
-- [ ] My pull request has a descriptive message with a short title, including a `Fixes $XXX -` or `Closes #XXX -` prefix to auto-close the issue that your PR addresses
