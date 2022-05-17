@@ -443,8 +443,7 @@ The main reason for this is that documentation is only very good if it is consis
 In addition, there are sometimes hands-on demos within the documentation. And we don't expect any external contributor
 to produce them.
 
-Code documentation is stored in the project's [GitHub wiki](../../wiki) so that it is as close to the code as possible.  
-
+Code documentation is stored in the project's [GitHub wiki](../../wiki) so that it is as close to the code as possible.
 
 If you are looking for end user documentation visit our [documentation overview](https://aivot.de/docs) and select
 the respective project.
