@@ -22,7 +22,7 @@ Eventuell Link auf Startseite und Sales-Material.
 # Who uses Gover?
 Testimonials und Link auf Aivot Website mit Testimonials
 
-# Usage
+# Setup
 SaaS (Link auf Page) und On-Premise. Hinweis auf SAP-App. Installationsanleitung wie man es on-premise hochspinnt.
 
 # Documentation
