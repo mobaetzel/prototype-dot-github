@@ -30,7 +30,112 @@ Currently top secret. If you want to get an introduction into using Gover contac
 
 
 # Setup
-SaaS (Link auf Page) und On-Premise. Hinweis auf SAP-App. Installationsanleitung wie man es on-premise hochspinnt.
+Gover was developed as a cloud native application and works best with Docker.
+You can find more Information on the [DockerHub page of Gover](https://hub.docker.com/repository/docker/mobaetzel/oam-view-engine).
+If you want to deploy Gover without docker, read more at the [native setup section](./README.md#setup-native).
+
+
+## Docker Setup
+If you have docker-compose installed, simply start the `docker-compose.yml` below by running `docker-compose up`.
+Gover is now available at <http://localhost:8000>.
+
+```yaml
+# docker-compose.yml
+version: "3"
+services:
+  mongo:
+    image: mongo:5.0.8
+    restart: always
+  backend:
+    image: mobaetzel/oam-view-engine:latest
+    restart: always
+    depends_on:
+      - mongo
+    environment:
+      OAM_HOST: localhost
+      OAM_PORT: 8000
+      OAM_MONGO_HOST: mongo
+      OAM_MONGO_PORT: 27017
+    ports:
+      - '8000:80'
+```
+
+
+## Native Setup
+
+### Prerequisites
+The native setup includes compiling the project and running it afterwards behind a nginx reverse proxy.
+Gover depends on a set of open source tools and technologies to compile and run.
+
+- Golang >= 1.17
+- Node.js >= 17.0
+- MongoDB >= 5.0
+- nginx >= 1.18
+
+**Please note, that the guide for a native setup was created with a unix platform in mind**
+
+
+### Building Gover
+After cloning this repository, open up a shell inside the root of the project.
+You have to compile the `backend` of Gover first.
+Run the following commands in your shell.
+
+```bash
+cd backend
+go mod download
+go build -o ../gover.run
+```
+
+You can then build the frontend applications `app` and `admin` by running the following commands.
+
+```bash
+npm install
+npm run build:app
+mv ./build /var/www/app/html
+PUBLIC_URL="/admin/" npm run build:admin
+mv ./build /var/www/admin/html
+```
+
+
+### Configure nginx
+Replace you default nginx config file at `/etc/nginx/http.d/default.conf` with the following content:
+
+```
+upstream backend {
+  server localhost:8000;
+}
+
+server {
+  listen 80      default_server;
+  listen [::]:80 default_server;
+
+  location /admin {
+    alias     /var/www/admin/html/;
+    try_files $uri $uri/ /index.html;
+  }
+
+  location /api {
+    proxy_pass       http://backend;
+    proxy_set_header Host      $host;
+    proxy_set_header X-Real-IP $remote_addr;
+  }
+
+  location / {
+    root      /var/www/app/html;
+    try_files $uri $uri/ /index.html;
+  }
+}
+```
+
+
+### Running Gover
+First, launch the mongodb server locally and make sure, that it is available through port **27017**.
+There is no need to expose the mongodb server to the outside.
+Then, execute the previously built executable to launch the Gover server.
+Gover should now be available at <http://localhost>.
+
+
+
 
 # Documentation
 Code documentation is stored in the project's [GitHub wiki](../../wiki) so that it is as close to the code as possible.
