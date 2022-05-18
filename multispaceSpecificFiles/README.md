@@ -3,20 +3,20 @@
 </p>
 
 <h1 align="center">MultiSpace</h1>
-<h3 align="center">Tagline</h3>
+<h3 align="center">Flexible booking of work resources for progressive organizations.</h3>
 
-<p>Our Mission is... / What we are..</p>
+<p>Our mission is to enable flexible working in shared office space. All resources for efficient and comfortable (collaborative)
+work in a hybrid environment are easily accessible and bookable at any time.</p>
+
 <!-- Badges go here -->
 
 # What is MultiSpace?
-Gover is an efficient low-code eGovernment platform for creating and managing user-centric online applications.  
-We enable administrations to:
-- build and manage visually stunning online applications fast
-- document changes reliably and automatically
-- ensure quality
-- comply with all legislation (at least in Germany 😅)
-
-All this while putting user experience (for citizens and administration staff) first.
+MultiSpace is a visual resource booking platform for quick and easy booking of work resources.  
+We enable organizations to:
+- work hybrid in flexible office environments
+- keep track of who has booked which desk
+- book work resources easily
+- obtain transparency over resources
 
 For more information visit us at <https://aivot.de/multispace>
 
@@ -31,6 +31,7 @@ Currently top secret. If you want to get an introduction into using MultiSpace c
 
 # Setup
 TODO
+
 
 
 

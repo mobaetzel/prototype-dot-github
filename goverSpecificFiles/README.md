@@ -3,13 +3,17 @@
 </p>
 
 <h1 align="center">Gover</h1>
-<h3 align="center">Das Fundament für moderne digitale Verwaltungsleistungen</h3>
+<h3 align="center">The foundation for modern digital e-government services</h3>
 
-<p>Our Mission is... / What we are...Digitaler Brückenbau zwischen Verwaltung und Bürger:innen</p>
+<p>Our mission is to build the digital bridge between administration and citizens. There are countries with an extreme
+need to catch up in the area of digitalization. They are too rigid and slow to digitize on their own. We want to change
+that and offer a way for administrations to catapult themselves to the spearhead of digitalization, especially at the
+touchpoint with citizens.</p>
+
 <!-- Badges go here -->
 
 # What is Gover?
-Gover is an efficient low-code eGovernment platform for creating and managing user-centric online applications.  
+Gover is an efficient low-code e-government platform for creating and managing user-centric online applications.  
 We enable administrations to:
 - build and manage visually stunning online applications fast
 - document changes reliably and automatically
