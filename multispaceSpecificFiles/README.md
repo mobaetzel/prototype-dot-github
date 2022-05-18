@@ -30,8 +30,113 @@ Currently top secret. If you want to get an introduction into using MultiSpace c
 
 
 # Setup
-TODO
+MultiSpace was developed as a cloud native application and works best with Docker.
+You can find more Information on the [DockerHub page of MultiSpace](https://hub.docker.com/repository/docker/mobaetzel/multispace).
+If you want to deploy MultiSpace without docker, read more at the [native setup section](./README.md#Native-Setup).
 
+
+## Docker Setup
+If you have docker-compose installed, simply start the `docker-compose.yml` below by running `docker-compose up`.
+MultiSpace is now available at <http://localhost:8000>.
+
+```yaml
+# docker-compose.yml
+version: "3"
+services:
+  db:
+    image: postgres:14.2
+    restart: always
+    environment:
+      POSTGRES_DB: multispace
+      POSTGRES_USER: multispace
+      POSTGRES_PASSWORD: multispaceftw1
+    ports:
+      - "5432:5432"
+  multispace:
+    image: mobaetzel/multispace:latest
+    restart: always
+    depends_on:
+      - db
+    environment:
+      DSKR_PG_HOST: db
+      DSKR_PG_PORT: 5432
+      DSKR_PG_USER: multispace
+      DSKR_PG_PASSWORD: multispaceftw1
+      DSKR_PG_DATABASE: multispace
+    ports:
+      - "8000:80"
+```
+
+
+## Native Setup
+**The guide for a native setup was made for unix platforms only.**
+This results in the lack of support for the windows platform of gunicorn.
+
+
+### Prerequisites
+The native setup includes compiling the project and running it afterwards behind a nginx reverse proxy.
+MultiSpace depends on a set of open source tools and technologies to compile and run.
+
+- Python >= 3.9
+- Postgresql >= 14.2
+- gunicorn >= 20.1
+
+
+### Fetching dependencies
+After cloning this repository, open up a shell inside the root of the project.
+You should create a virtual environment and fetch all required dependencies.
+
+```bash
+python -m venv ./.venv
+source ./.venv/bin/activate
+pip install -r requirements.txt
+pip install gunicorn
+```
+
+
+### Configure nginx
+Replace you default nginx config file at `/etc/nginx/http.d/default.conf` with the following content:
+
+```
+server {
+    listen 80;
+
+    location /static/ {
+        root /path/to/the/cloned/repository;
+    }
+
+     location /media/ {
+        root /path/to/the/cloned/repository;
+    }
+
+    location / {
+        proxy_pass http://127.0.0.1:8000;
+        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
+```
+
+
+### Running MultiSpace
+You need to perform several actions when running MultiSpace for the first time.
+
+```bash
+python manage.py collectstatic --no-input
+python manage.py migrate
+python manage.py createsuperuser
+```
+
+These commands will require you to create a new superuser account to manage your installation.
+After you've run the provision commands, you can start the MultiSpace server.
+Run the following command to start the MultiSpace:
+
+```bash
+gunicorn multispace.wsgi --bind 127.0.0.1:8000 --workers 3
+```
+
+The MultiSpace server should now be available at <http://localhost>.
 
 
 
